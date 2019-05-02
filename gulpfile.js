@@ -61,7 +61,7 @@ const PATHS = {
       DEST: 'docs/',
     },
     RAW: {
-      SRC: 'pug/_mixins.pug',
+      SRC: `pug/_${name}.pug`,
       DEST: 'dist/pug/',
     },
   },

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Create fancy plugin</title>
+    <title>Fancy scroll</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
@@ -13,12 +13,12 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="assets/lib/prism/prism-okaidia.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><!-- Place third-party plugin's stylesheets here-->
-    <link rel="stylesheet" href="assets/lib/create-fancy-plugin/css/create-fancy-plugin.min.css" />
+    <link rel="stylesheet" href="assets/lib/fancy-scroll/css/fancy-scroll.min.css" />
     <!--script(src='assets/lib/jquery/jquery.min.js')-->
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="assets/lib/prism/prism.js"></script>
     <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script><!-- Place third-party plugin's JavaScripts here-->
-    <script src="assets/lib/create-fancy-plugin/js/create-fancy-plugin.min.js"></script>
+    <script src="assets/lib/fancy-scroll/js/fancy-scroll.min.js"></script>
   </head>
 
   <body>
@@ -27,41 +27,32 @@
         <div class="col">
           <div class="card shadow-sm mb-3">
             <div class="card-body">
-              <h3>Create fancy plugin</h3>
-              <p class="mb-0">Life isn't about finding yourself. Life is about creating yourself.</p><a class="btn btn-link pl-0" href="https://github.com/humayunkabir/create-fancy-plugin" target="_blank">See on GitHub<span class="fas fa-chevron-right ml-1" data-fa-transform="shrink-4"></span></a>
+              <h3>Fancy scroll</h3>
+              <p class="mb-0">This smooth scrolling plugin which allows you to animate the page's scrolling to elements within the page. The markup snippet below demonstrates:</p><a class="btn btn-link pl-0" href="https://github.com/humayunkabir/fancy-scroll" target="_blank">See on GitHub<span class="fas fa-chevron-right ml-1" data-fa-transform="shrink-4"></span></a>
             </div>
           </div>
           <div class="card shadow-sm mb-3">
             <div class="card-header bg-light">
-              <h5 class="mb-0">Getting started!</h5>
+              <h5 class="mb-0">Example</h5>
             </div>
             <div class="card-body">
-              <ol class="pl-3">
-                <li>
-                  <p class="mb-0">Clone <code class="font-weight-bold font-italic">create-fancy-plugin</code> and rename it with your plugin name.</p><pre class="mt-2"><code class="language-html">git clone git@github.com:humayunkabir/create-fancy-plugin.git PLUGIN_NAME</code></pre><span>or</span><pre class="mt-2"><code class="language-html">git clone https://github.com/humayunkabir/create-fancy-plugin.git PLUGIN_NAME</code></pre>
-                </li>
-                <li>
-                  <p class="mb-0">Enter into your plugin folder.</p><pre class="mt-2"><code class="language-html">cd PLUGIN_NAME</code></pre>
-                </li>
-                <li>
-                  <p class="mb-0">Change your remote's URL from <span class="font-weight-bold">SSH</span> or <span class="font-weight-bold">HTTPS</span> with the <code>git remote set-url</code> command.<pre class="mt-2"><code class="language-html">git remote set-url origin git@github.com:USERNAME/PLUGIN_NAME.git</code></pre><span>or</span><pre class="mt-2"><code class="language-html">git remote set-url origin https://github.com/USERNAME/PLUGIN_NAME.git</code></pre>
-                    <p class="mb-0">Verify that the remote URL has changed.</p><pre class="mt-2"><code class="language-html">git remote -v</code></pre>
-                  </p>
-                </li>
-                <li>
-                  <p class="mb-0">Download dependencies </p><pre class="mt-2"><code class="language-html">npm i</code></pre>
-                <li>
-                  <p class="mb-0">To start</p>
-                </li><pre class="mt-2"><code class="language-html">gulp</code></pre><span>or</span><pre class="mt-2"><code class="language-html">npm start</code></pre>
-                </li>
-                <li>
-                  <p class="mb-0">Change the reference of <code>create-fancy-plugin</code> with your plugin name and the <code>url</code>s in <code>package.json</code> file.</p>
-                </li>
-                <li>
-                  <p class="mb-0">To build <code>dist</code> run:</p><pre class="mt-2"><code class="language-html">gulp dist</code></pre><span>or</span><pre class="mt-2"><code class="language-html">npm run build</code></pre>
-                </li>
-              </ol>
-              <p class="mb-0">Changing a remote's URL: <a href="https://help.github.com/en/articles/changing-a-remotes-url" target="_blank">https://help.github.com/en/articles/changing-a-remotes-url</a></p>
+              <div class="row">
+                <div class="col-12"><a href="#example-section" data-fancyscroll="true" data-offset="15">
+                    Scroll to the #example-section below
+                  </a></div>
+                <div class="col-12"><pre class="rounded mt-2 mb-0"><code class="language-html">&lt;a href=&quot;#example-section&quot; data-fancyscroll=&quot;true&quot; data-offset=&quot;15&quot;&gt;
+  Scroll to the #example-section below
+&lt;/a&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow-sm mb-3" id="example-section">
+            <div class="card-header bg-light">
+              <h5 class="mb-0">The above link will scroll to this section.</h5>
+            </div>
+            <div class="card-body">
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At delectus deleniti eius expedita explicabo, incidunt ipsa iste magnam nobis placeat praesentium reprehenderit sapiente similique voluptas voluptate. Accusamus, assumenda blanditiis commodi eligendi harum illo illum impedit incidunt laboriosam nobis qui rem repellat, tempora? A ab amet aspernatur consectetur cumque delectus, deleniti dolorum illo illum nihil nisi perspiciatis placeat porro praesentium quisquam recusandae reprehenderit sapiente sunt. A at aut consectetur consequuntur, culpa debitis delectus dicta eaque earum illo illum iste iusto, magni maxime minima minus odit omnis pariatur repellendus sapiente sunt vel voluptates. Aliquam consequuntur deleniti eaque et explicabo labore minus numquam optio perspiciatis, porro sed veritatis vitae! Asperiores atque consectetur culpa cupiditate dolorem ducimus eveniet exercitationem in maxime, nemo odio officia, omnis placeat quia quidem repellendus similique sit temporibus veniam vitae! Ab aliquid commodi consequatur culpa cum delectus dolore dolorem ea eveniet ex exercitationem fugiat illo in iure maiores modi molestiae nisi nostrum numquam odit officiis placeat quas quia quidem quisquam quo, reiciendis rerum sapiente soluta sunt tenetur ullam ut voluptas voluptate voluptatem voluptatibus voluptatum? Ab amet aspernatur at autem beatae cupiditate debitis dolore doloremque dolores eligendi et expedita fuga fugit harum incidunt labore minus nulla obcaecati quod quos, ut vero voluptatum! Alias amet aspernatur culpa debitis excepturi labore odit, perspiciatis qui saepe tempore! Adipisci aliquid at atque blanditiis consequuntur, corporis delectus deserunt distinctio dolorem dolores eius eum expedita fugiat hic illo impedit in ipsam ipsum iure iusto maxime modi nisi nulla omnis provident quaerat quasi quibusdam quod ratione reprehenderit saepe, sed sit suscipit tempore temporibus veniam voluptatibus? Amet animi autem culpa delectus deserunt dolores doloribus, enim expedita hic id ipsam maxime neque nesciunt nihil nostrum possimus, quis, quod reiciendis repellendus soluta! Accusamus alias aliquid amet asperiores consequatur cupiditate, delectus dignissimos dolore, doloremque doloribus eaque earum eius est et exercitationem expedita explicabo id illum in, inventore magnam magni maiores nemo non odit perspiciatis possimus quae qui quis saepe tempora vitae voluptates voluptatum. Accusamus aliquid, consequuntur deleniti eveniet explicabo id necessitatibus perferendis quidem soluta veritatis voluptas voluptate. Architecto consectetur culpa ducimus eaque error fugit harum maiores nisi provident quae, recusandae, sapiente vero? Ad aliquid corporis laudantium molestiae mollitia qui, repellat sequi sunt. Adipisci culpa cumque expedita, fugit harum hic, ipsum iure magni maiores omnis quis quod, repellendus saepe sint sit soluta ullam. Autem cum dolore doloremque ducimus exercitationem explicabo fugiat illo in, modi neque obcaecati omnis saepe, sequi totam voluptatum! Autem beatae dolorum ducimus, eligendi eos est excepturi facere facilis non nulla odit praesentium quas, quibusdam quis repellat reprehenderit similique veritatis voluptates. Aliquam consequatur enim molestias nihil nobis reiciendis reprehenderit! Ab ad aperiam at atque aut est, exercitationem, impedit laboriosam molestias necessitatibus odit perspiciatis, provident quia quibusdam reprehenderit! Ab dolores, nemo neque nesciunt optio quia quo voluptate. Ab animi, aperiam aspernatur debitis dicta eaque expedita fuga hic in incidunt, iure iusto libero natus nisi nobis praesentium repudiandae sapiente voluptatum! A alias assumenda commodi corporis cupiditate dicta ducimus earum est, fugiat incidunt inventore labore mollitia nihil nulla numquam optio perspiciatis possimus quam quisquam quod quos repellat repellendus sequi soluta tempora ut velit veniam vero voluptas voluptatum. Ad deserunt exercitationem ipsam minima natus nesciunt, nihil nisi officiis omnis, quos recusandae repudiandae. Aliquid deleniti, id! Consectetur deleniti ducimus repudiandae suscipit tempora tenetur vel! Aspernatur corporis eligendi esse est facere perspiciatis repellat vel. Ab animi consectetur cumque debitis dolore doloribus error eveniet expedita facilis, incidunt natus obcaecati omnis placeat quasi quia, quos repellat, reprehenderit sed suscipit unde veniam voluptate voluptatum! Consectetur cum cupiditate error maiores modi nesciunt nihil nobis velit. Atque non repellat tempora. Atque dolor eligendi eum illo ipsum minima, molestiae officiis, quos reiciendis sapiente unde voluptates. Aliquam aperiam architecto beatae consequatur consequuntur cum cumque debitis deleniti dolorem error fugit hic inventore ipsa ipsam ipsum iure maxime modi natus necessitatibus nemo nesciunt non obcaecati officia omnis optio perferendis possimus quasi qui quod quos reiciendis sapiente tenetur ullam, vel veniam voluptatem voluptatum! Ad cumque dolorem eius error exercitationem in molestias mollitia provident tempore velit! Blanditiis deserunt laborum numquam, placeat sit ut voluptates! Ab architecto autem consectetur cupiditate debitis ex nemo qui? In maiores quaerat sunt suscipit. Aperiam at atque blanditiis cum debitis dolore doloribus eligendi et ex explicabo fuga, fugiat ipsa iste itaque iure laboriosam laudantium minus nam nihil omnis quas quos repellat sequi similique soluta ullam voluptas. At deserunt dolorem eos eum harum minima molestiae non, omnis optio quibusdam, repellendus reprehenderit saepe sint ut voluptate. Blanditiis commodi corporis dicta, ea esse incidunt minus nobis quasi, quibusdam sapiente sequi temporibus, ullam. A ab assumenda deserunt dolor dolorem expedita explicabo facilis ipsa laborum molestias non placeat provident, quasi, quisquam sapiente sit ullam ut vel voluptas voluptatum. Ab accusamus ad aliquam atque corporis deserunt, dolor esse expedita, harum illum, incidunt ipsa odio officia pariatur possimus praesentium saepe sed tempora tenetur voluptatum. Autem beatae consequuntur ducimus facere iste maiores nulla pariatur praesentium quisquam voluptas! Consectetur ipsum quam tempore? Accusamus, adipisci consequatur corporis distinctio dolor dolorem dolores dolorum ea exercitationem facere harum id ipsa ipsum minima modi molestias mollitia natus nemo neque nesciunt optio placeat praesentium provident quibusdam quos recusandae rem, reprehenderit saepe ullam vel velit veniam veritatis voluptas! Ad alias animi, aperiam consequuntur cupiditate dolores ea eius eos et eveniet facilis hic id in ipsam itaque, iusto laboriosam molestias nemo neque nihil obcaecati odio perferendis possimus provident quam quia, quibusdam quidem quis ratione recusandae repellendus saepe sit tempore tenetur vel velit veniam. Ab adipisci aliquid at beatae, consequatur delectus dicta dignissimos dolorem earum eum harum hic itaque labore laborum laudantium magnam nam natus neque non perferendis quas qui rem sit tempora tempore, veritatis vero? Distinctio minima pariatur quisquam. Adipisci commodi illum ipsa iusto laboriosam numquam odit sint! Delectus, dicta illo impedit maiores pariatur porro quisquam repudiandae tempora tenetur? Asperiores autem beatae cupiditate deleniti dolores earum error et id, ipsa iste labore, molestiae nam nihil nobis nulla obcaecati perspiciatis porro provident quia quidem reprehenderit repudiandae saepe sed sequi ullam ut vitae voluptate. Blanditiis, debitis dolor dolorem, eaque explicabo facilis ipsa nemo nulla officia optio, quas qui quia tenetur vero vitae?</p>
             </div>
           </div>
         </div>
