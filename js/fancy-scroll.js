@@ -8,8 +8,13 @@ $(document).ready(($) => {
     .click(function scrollTo(e) {
       const $this = $(this);
       const { pathname, hostname } = location;
-      const condition = pathname === $this[0].pathname && pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && hostname === this.hostname;
-      if (condition) {
+      const condition = () => {
+        const condition1 = pathname === $this[0].pathname;
+        const condition2 = pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '');
+        const condition3 = hostname === this.hostname;
+        return condition1 && condition2 && condition3;
+      };
+      if (condition()) {
         e.preventDefault();
         let target = $(this.hash);
         target = target.length ? target : $(`[name=${this.hash.slice(1)}]`);

@@ -7,3 +7,8 @@ This smooth scrolling plugin which allows you to animate the page\'s scrolling t
   Scroll to the #example-section
 </a>
 ```
+
+#### JavaScript
+```
+<script src="assets/lib/fancy-scroll/js/fancy-scroll.min.js"></script>
+```

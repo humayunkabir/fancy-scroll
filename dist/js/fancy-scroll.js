@@ -8,12 +8,22 @@ $(document).ready(function ($) {
       location = _window.location,
       history = _window.history;
   $('a[data-fancyscroll]').click(function scrollTo(e) {
+    var _this = this;
+
     var $this = $(this);
     var pathname = location.pathname,
         hostname = location.hostname;
-    var condition = pathname === $this[0].pathname && pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && hostname === this.hostname;
 
-    if (condition) {
+    var condition = function condition() {
+      var condition1 = pathname === $this[0].pathname;
+
+      var condition2 = pathname.replace(/^\//, '') === _this.pathname.replace(/^\//, '');
+
+      var condition3 = hostname === _this.hostname;
+      return condition1 && condition2 && condition3;
+    };
+
+    if (condition()) {
       e.preventDefault();
       var target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
