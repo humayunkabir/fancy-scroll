@@ -3,12 +3,13 @@ block append variables
     var pageHeader = {
       title: 'Fancyscroll',
       description: 'This smooth scrolling plugin which allows you to animate the page\'s scrolling to elements within the page. The markup snippet below demonstrates:',
-      url: 'https://github.com/humayunkabir/fancy-scroll',
-      linkText: 'See on GitHub'
+      url: 'https://humayunkabir.github.io/fancy-scroll/',
+      linkText: 'See on Documentation'
     }
 
-mixin fancyScrollLink
-  a(href="#example-section" data-fancyscroll='true' data-offset="15")
+mixin fancyScrollLink(config)
+  - var config = Object.assign({offset: 15}, config)
+  a(href="#example-section" data-fancyscroll='true' data-offset=config.offset)
     = '\n'
     | Scroll to the #example-section below
     = '\n'
